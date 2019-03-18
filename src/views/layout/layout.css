@@ -1,0 +1,40 @@
+.root-layout{
+  height: 100vh;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+  
+ .trigger:hover {
+  color: #108ee9;
+}
+  
+.logo {
+  height: 32px;
+  width: 32px;
+  background: url(../../logo.svg) no-repeat;
+  margin: 16px auto;
+}
+  
+.ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+}
+  
+.ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+.root-content{
+  margin: 24px 16px; 
+  padding: 24px; 
+  background: #fff;
+}
+
+.root-header{
+  background: #fff;
+  padding: 0;
+}
