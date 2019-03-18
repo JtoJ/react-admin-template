@@ -24,7 +24,7 @@ export default class SiderDemo extends React.Component {
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
               <Icon type="user" />
-              <Link to="/" className="nav-text">Home</Link>
+              <Link to="/" className="nav-text">Exhibition</Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="video-camera" />
