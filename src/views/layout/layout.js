@@ -24,15 +24,15 @@ export default class SiderDemo extends React.Component {
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
               <Icon type="user" />
-              <span className="nav-text">nav 1</span>
+              <Link to="/" className="nav-text">Home</Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="video-camera" />
-              <span className="nav-text">nav 2</span>
+              <Link to="/tableExample" className="nav-text">Table</Link>
             </Menu.Item>
             <Menu.Item key="3">
               <Icon type="upload" />
-              <span className="nav-text">nav 3</span>
+              <span className="nav-text">ECharts</span>
             </Menu.Item>
           </Menu>
         </Sider>
