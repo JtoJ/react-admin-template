@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './layout.css';
 import { Layout, Menu, Icon } from 'antd';
+import TableExample from '../tableExample/table';
 const { Header, Sider, Content } = Layout;
 
 export default class SiderDemo extends React.Component {
@@ -45,7 +47,9 @@ export default class SiderDemo extends React.Component {
             />
           </Header>
           <Content className="root-content">
-            Content
+            <Switch>
+              <Route path="/table" component={TableExample}></Route>
+            </Switch>
           </Content>
         </Layout>
       </Layout>
