@@ -38,3 +38,8 @@
   background: #fff;
   padding: 0;
 }
+
+.nav-text a{
+  color: #fff;
+  text-decoration: none;
+}

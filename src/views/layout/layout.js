@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './layout.css';
 import { Layout, Menu, Icon } from 'antd';
 import TableExample from '../tableExample/table';
+import Home from '../home/home';
 const { Header, Sider, Content } = Layout;
 
 export default class SiderDemo extends React.Component {
@@ -25,16 +26,22 @@ export default class SiderDemo extends React.Component {
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
-              <Icon type="user" />
-              <Link to="/" className="nav-text">Exhibition</Link>
+              <Icon type="home" />
+              <span className="nav-text">
+                <Link to="/home">Exhibition</Link>
+              </span>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="video-camera" />
-              <Link to="/tableExample" className="nav-text">Table</Link>
+              <Icon type="table" />
+              <span className="nav-text">
+                <Link to="/table">Table</Link>
+              </span>
             </Menu.Item>
             <Menu.Item key="3">
-              <Icon type="upload" />
-              <span className="nav-text">ECharts</span>
+              <Icon type="pie-chart" />
+              <span className="nav-text">
+                <Link to="/echarts">ECharts</Link>
+              </span>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -48,6 +55,7 @@ export default class SiderDemo extends React.Component {
           </Header>
           <Content className="root-content">
             <Switch>
+              <Route path="/home" component={Home}></Route>
               <Route path="/table" component={TableExample}></Route>
             </Switch>
           </Content>
