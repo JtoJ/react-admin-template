@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import LoginMethod from '../../api/userApi';
 import './login.scss';
+//在需要使用mock的返回数据的页面引入
+import '../../mockData/userData';
+
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -11,7 +15,10 @@ class NormalLoginForm extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        this.props.history.push('/home');
+        LoginMethod(values).then(res => {
+          this.props.history.push('/');
+        })
+        
       }
     });
   }

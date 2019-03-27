@@ -4,6 +4,7 @@ import './layout.css';
 import { Layout, Menu, Icon } from 'antd';
 import TableExample from '../tableExample/table';
 import Home from '../home/home';
+import EchartsDemo from '../chart/echartsDemo';
 const { Header, Sider, Content } = Layout;
 
 export default class SiderDemo extends React.Component {
@@ -25,23 +26,31 @@ export default class SiderDemo extends React.Component {
         >
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+            
             <Menu.Item key="1">
-              <Icon type="home" />
-              <span className="nav-text">
-                <Link to="/home">Exhibition</Link>
-              </span>
+              <Link to="/home">
+                <Icon type="home" />
+                <span className="nav-text">
+                  Exhibition
+                </span>
+              </Link>
             </Menu.Item>
+            
             <Menu.Item key="2">
-              <Icon type="table" />
-              <span className="nav-text">
-                <Link to="/table">Table</Link>
-              </span>
+              <Link to="/table">
+                <Icon type="table" />
+                <span className="nav-text">
+                  Table
+                </span>
+              </Link>
             </Menu.Item>
             <Menu.Item key="3">
-              <Icon type="pie-chart" />
-              <span className="nav-text">
-                <Link to="/echarts">ECharts</Link>
-              </span>
+              <Link to="/echarts">
+                <Icon type="pie-chart" />
+                <span className="nav-text">
+                ECharts
+                </span>
+              </Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -55,8 +64,10 @@ export default class SiderDemo extends React.Component {
           </Header>
           <Content className="root-content">
             <Switch>
-              <Route path="/home" component={Home}></Route>
               <Route path="/table" component={TableExample}></Route>
+              <Route path="/echarts" component={EchartsDemo}></Route>
+              {/* when none of the above match, <NoMatch> will be rendered */}
+              <Route component={Home}></Route>
             </Switch>
           </Content>
         </Layout>
