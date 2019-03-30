@@ -16,6 +16,7 @@ class NormalLoginForm extends React.Component {
       if (!err) {
         console.log('Received values of form: ', values);
         LoginMethod(values).then(res => {
+          console.log('login form is correct!')
           this.props.history.push('/');
         })
         
