@@ -6,7 +6,7 @@ import TableExample from '../tableExample/table';
 import Home from '../home/home';
 import EchartsDemo from '../chart/echartsDemo';
 const { Header, Sider, Content } = Layout;
-
+const SubMenu = Menu.SubMenu;
 
 export default class MainLayout extends React.Component {
   state = {
@@ -53,6 +53,14 @@ export default class MainLayout extends React.Component {
                 </span>
               </Link>
             </Menu.Item>
+            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
+              <Menu.Item key="5">Option 5</Menu.Item>
+              <Menu.Item key="6">Option 6</Menu.Item>
+              <SubMenu key="sub3" title="Submenu">
+                <Menu.Item key="7">Option 7</Menu.Item>
+                <Menu.Item key="8">Option 8</Menu.Item>
+              </SubMenu>
+          </SubMenu>
           </Menu>
         </Sider>
         <Layout>
