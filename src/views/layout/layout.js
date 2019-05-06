@@ -41,7 +41,7 @@ export default class MainLayout extends React.Component {
               <Link to="/table">
                 <Icon type="table" />
                 <span className="nav-text">
-                  Table
+                  TableDemo
                 </span>
               </Link>
             </Menu.Item>
